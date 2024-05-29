@@ -1,0 +1,164 @@
+@import '../theme/styles/variables.scss';
+
+.MuiPickersBasePicker-container {
+  max-width: 325px;
+  min-width: 325px;
+  position: relative;
+
+  .MuiPickersDay {
+    &-day {
+      margin: 2px;
+      color: lightMediumEmphasis($color-black);
+      &:hover {
+        background-color: hover($color-black);
+      }
+    }
+
+    &-current {
+      border: 1px solid lightMediumEmphasis($color-black);
+      border-radius: 50%;
+      color: lightMediumEmphasis($color-black);
+    }
+
+    &-daySelected {
+      &:hover {
+        color: $color-white;
+        background-color: $color-dark-green;
+      }
+      color: $color-white;
+      background-color: $color-dark-green;
+
+      &.MuiPickersDay-hidden {
+        opacity: 1;
+        color: disabled($color-white);
+      }
+    }
+
+    &-hidden {
+      opacity: 1;
+      color: disabled($color-black);
+    }
+  }
+}
+
+.MuiPickersCalendarHeader-iconButton {
+  padding: 6px !important;
+}
+
+.MuiPickersYearSelection-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 4px;
+
+  .MuiPickersYear-root {
+    flex: 0 0 25%;
+    justify-content: center;
+    align-items: center;
+    color: lightMediumEmphasis($color-black) !important;
+
+    &:hover {
+      color: lightMediumEmphasis($color-black);
+    }
+
+    &:focus {
+      background-color: hover($color-black);
+      border-radius: 28px;
+    }
+
+    &.MuiPickersYear-yearSelected {
+      font-size: 1rem;
+      line-height: 1.75;
+      height: 40px;
+      margin: 0;
+      color: $color-white !important;
+      background-color: $color-dark-green;
+      letter-spacing: 0.00938em;
+      border-radius: 28px;
+    }
+  }
+}
+
+.customTopBar {
+  display: flex;
+  margin-top: 16px;
+  max-height: 30px;
+  min-height: 30px;
+  align-items: center;
+  padding-left: 24px;
+  padding-right: 12px;
+
+  .open-year {
+    border-radius: 50%;
+    display: block;
+    min-width: auto;
+    overflow: hidden;
+    width: 20px;
+    padding: 0;
+    height: 20px;
+    position: relative;
+    margin: 0 0 0 5px;
+
+    &:before {
+      content: '';
+      width: 0;
+      height: 0;
+      top: 50%;
+      left: 50%;
+      margin: -2px 0 0 -5px;
+      position: absolute;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid lightMediumEmphasis($color-black);
+    }
+
+    &.active {
+      &:before {
+        -moz-transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg);
+        margin: -3px 0 0 -5px;
+      }
+    }
+  }
+}
+
+.MuiPickersCalendarHeader-transitionContainer {
+  display: none !important;
+}
+
+.MuiPickersCalendarHeader-switchHeader {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.MuiFormControl-root.date-picker-input {
+  border: none;
+  font-size: 1rem;
+  position: relative;
+  cursor: pointer;
+
+  &:before {
+    content: '';
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    margin: -2px 0 0 -5px;
+    position: absolute;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid lightMediumEmphasis($color-black);
+  }
+
+  .MuiInput-underline:before,
+  .MuiInput-underline:after {
+    display: none;
+  }
+}
+
+.MuiInputAdornment-positionEnd {
+  margin-bottom: 10px;
+}

@@ -1,0 +1,18 @@
+export const DatePickerLocalizationCodes = {
+  'zh-tw': 'zhTW',
+  'zh-cn': 'zhCN',
+  'zh-sg': 'zhTW',
+  'zh-hk': 'zhTW',
+  en: 'enUS',
+  'en-ch': 'enUS',
+  'en-au': 'enAU',
+  'en-ca': 'enCA',
+  'en-gb': 'enGB',
+  'en-nz': 'enNZ',
+  'en-us': 'enUS',
+  it: 'it',
+  es: 'es',
+  'es-mx': 'es',
+  tr: 'tr',
+  fr: 'fr',
+};
